@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #17263d;
+    background-color: #f5f7fb;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: #0b1d36;
+    color: white;
+}
+
+.navbar h2 {
+    color: #4d91ff;
+    font-size: 28px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: #4d91ff;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    background:
+        linear-gradient(90deg, rgba(5, 20, 40, 0.88), rgba(5, 20, 40, 0.2)),
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    background-color: #246bfe;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #1254dd;
+    transform: translateY(-3px);
+}
+
+/* Properties */
+.properties {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.properties > h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.property-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.property-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition: 0.3s;
+}
+
+.property-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.property-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.property-card h3 {
+    font-size: 20px;
+    margin: 18px 18px 8px;
+}
+
+.property-card p {
+    color: #68778d;
+    margin: 0 18px 12px;
+}
+
+.property-card h4 {
+    color: #246bfe;
+    font-size: 18px;
+    margin: 0 18px 18px;
+}
+
+.property-btn {
+    display: inline-block;
+    background-color: #0b1d36;
+    color: white;
+    text-decoration: none;
+    padding: 11px 18px;
+    margin: 0 18px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.property-btn:hover {
+    background-color: #246bfe;
+}
+
+/* About */
+.about {
+    padding: 75px 12%;
+    background-color: white;
+    text-align: center;
+}
+
+.about h2,
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: #68778d;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+/* Contact */
+.contact {
+    padding: 70px 8%;
+    text-align: center;
+    background-color: #eaf1ff;
+}
+
+.contact p {
+    margin: 12px 0;
+    color: #526178;
+}
+
+/* Footer */
+footer {
+    padding: 25px;
+    background-color: #0b1d36;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .navbar {
+        padding: 22px 5%;
+    }
+
+    .links a {
+        margin-left: 12px;
+    }
+
+    .hero {
+        padding: 60px 6%;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .property-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .links a {
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 55px 6%;
+    }
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .properties {
+        padding: 55px 6%;
+    }
+
+    .properties > h2 {
+        font-size: 28px;
+    }
+
+    .property-container {
+        grid-template-columns: 1fr;
+    }
+
+    .property-card img {
+        height: 240px;
+    }
+
+    .about {
+        padding: 55px 7%;
+    }
+
+    .about h2,
+    .contact h2 {
+        font-size: 27px;
+    }
+}
